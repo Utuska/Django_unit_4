@@ -1,3 +1,6 @@
 from django.contrib import admin
-
-# Register your models here.
+from phones.models import Phone
+@admin.register(Phone)
+class AdminPhone(admin.ModelAdmin):
+    # отображение полей в админке
+    list_display = ["id", "name", "price"]

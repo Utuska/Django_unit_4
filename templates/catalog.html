@@ -9,10 +9,26 @@
         </div>
 
         <div class="sort-block">
+
             {# Здесь должен быть раздел с сортировкой #}
         </div>
+        <form action="" method="get" class="search-form">
+            <p class="h"><strong>Сортировка каталога</strong></p> {{ form.as_p }}
+            <input type="submit" value="Поиск">
+        </form>
 
         <div class="content">
+            {% for model in phone %}
+            <h2><a href="{% url 'show_product' slug=model.slug %}">{{ model.name }}</a></h2>
+                <tr class='success'>
+                    <td>{{ model.name }}</td>
+                    <td>{{ model.id }}</td>
+                    <td>{{ model.price }}</td>
+                    <td>{{ model.image }}</td>
+                    <td>{{ model.lte_exists }}</td>
+                    <td>{{ model.release_date }}</td><br>
+                </tr>
+            {% endfor %}
             {# Здесь должен отображаться каталог с телефонами #}
         </div>
     </div>

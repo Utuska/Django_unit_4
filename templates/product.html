@@ -8,7 +8,14 @@
             <h1>Телефон</h1>
         </div>
         <div class="content">
-
+            <tr class='success'>
+                <td>id: {{ phone.id }}</td><br>
+                <td>name: {{ phone.name }}</td><br>
+                <td>price: {{ phone.price }}</td><br>
+                <td>image: {{ phone.image }}</td><br>
+                <td>lte_exists: {{ phone.lte_exists }}</td><br>
+                <td>release_date: {{ phone.release_date }}</td><br>
+            </tr>
         </div>
     </div>
 {% endblock %}
